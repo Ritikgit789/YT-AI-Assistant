@@ -64,7 +64,7 @@ def hyperparameter_tuning_tool(transcript_len: int) -> dict:
         f"Here is the length of the youtube transcript: {transcript_len}"
     )
     response = llm.invoke(prompt)
-    response = llm.invoke(prompt)
+    # response = llm.invoke(prompt)
     content = response.content  # Correct attribute!
     chunk_size = int(content.split("chunk_size:")[1].split("\n")[0].strip().replace(',', ''))
     segment_size = int(content.split("segment_size:")[1].split("\n")[0].strip().replace(',', ''))
